@@ -42,12 +42,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTick(long l) {
                 timerTextView.setText(String.valueOf(l/1000) + "s");
+                button0.setVisibility(View.VISIBLE);
+                button1.setVisibility(View.VISIBLE);
+                button2.setVisibility(View.VISIBLE);
+                button3.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onFinish() {
                 resultTextView.setText("Done!");
                 playAgainButton.setVisibility(View.VISIBLE);
+                button0.setVisibility(View.INVISIBLE);
+                button1.setVisibility(View.INVISIBLE);
+                button2.setVisibility(View.INVISIBLE);
+                button3.setVisibility(View.INVISIBLE);
 
             }
         }.start();
